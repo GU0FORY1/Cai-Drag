@@ -1,15 +1,23 @@
 <template>
   <div class="components">
-    <div id="hello" draggable="true" @dragstart="dragstart">hello</div>
-    <div id="world" draggable="true" @dragstart="dragstart">world</div>
+    <div
+      class="components-item"
+      v-for="item in comOptList"
+      :key="item.key"
+      draggable="true"
+      @dragstart="(e) => dragstart(e, item.key)"
+    >
+      {{ item.name }}
+    </div>
   </div>
 </template>
 
 <script setup>
-const dragstart = (e) => {
-  console.log("组件开始拖动", e);
+import comOptList from "./comOptList";
+
+const dragstart = (e, key) => {
   e.dataTransfer.setData("type", "component");
-  e.dataTransfer.setData("id", e.target.id);
+  e.dataTransfer.setData("key", key);
 };
 </script>
 
@@ -17,5 +25,15 @@ const dragstart = (e) => {
 .components {
   width: 200px;
   background-color: powderblue;
+}
+.components-item {
+  background-color: aquamarine;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 5px 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  user-select: none;
 }
 </style>

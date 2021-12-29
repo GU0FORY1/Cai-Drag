@@ -11,7 +11,7 @@
       </el-col>
       <el-col :span="4"> 缩放比例 </el-col>
       <el-col :span="4">
-        <el-input placeholder="缩放比例" v-model="scale" />
+        <el-input placeholder="缩放比例" v-model.number="scale" />
       </el-col>
     </el-row>
   </div>

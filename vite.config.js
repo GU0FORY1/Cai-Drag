@@ -7,8 +7,10 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 // https://vitejs.dev/config/
 export default defineConfig({
-  alias: {
-    "@": path.resolve(__dirname, "src"), //把src改为@
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"), //把src改为@
+    },
   },
   plugins: [
     vue(),
