@@ -25,13 +25,12 @@ body {
   width: 100vw;
 }
 .header {
-  height: 100px;
-  /* border-bottom: 1px solid black; */
+  height: 50px;
+  border-bottom: 1px solid #ddd;
 }
 .content {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 51px);
   display: flex;
-  background-color: gray;
 }
 </style>

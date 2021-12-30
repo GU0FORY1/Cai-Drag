@@ -24,15 +24,18 @@ const dragstart = (e, key) => {
 <style scoped>
 .components {
   width: 200px;
-  background-color: powderblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
 }
 .components-item {
-  background-color: aquamarine;
-  height: 80px;
+  height: 50px;
+  width: 40%;
   text-align: center;
-  line-height: 80px;
+  line-height: 50px;
   margin: 5px 5px;
-  border: 1px solid black;
+  border: 1px solid #d4d4d4;
   cursor: pointer;
   user-select: none;
 }

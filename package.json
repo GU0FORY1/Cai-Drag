@@ -7,19 +7,22 @@
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "scripts": {
-    "dev": "vite",
+    "dev":"vue-cli-service serve",
+    "vite:dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
     "axios": "^0.24.0",
+    "echarts": "^5.2.2",
     "element-plus": "^1.2.0-beta.6",
     "pinia": "^2.0.8",
     "vue": "^3.2.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/cli-service": "^4.5.15",
     "unplugin-auto-import": "^0.5.4",
     "unplugin-vue-components": "^0.17.9",
     "vite": "^2.6.4"

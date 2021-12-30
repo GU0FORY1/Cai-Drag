@@ -1,16 +1,18 @@
 <template>
-  <div :class="active ? 'shape-active' : 'shape'" @click.capture="onClick">
+  <div :class="currentSelect === props.index ? 'shape-active' : 'shape'">
     <slot></slot>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-// defineProps({});
-const active = ref(false);
-const onClick = () => {
-  active.value = true;
-};
+import { storeToRefs } from "pinia";
+import { useGlobalStore } from "@/store/global";
+const global = useGlobalStore();
+const { width, height, scale, currentSelect } = storeToRefs(global);
+const props = defineProps({
+  index: Number,
+});
 </script>
 
 <style scoped>
